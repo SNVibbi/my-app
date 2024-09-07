@@ -1,0 +1,37 @@
+1. Introduction
+
+a) Hello React APP
+
+2. Components
+
+a) Create a simple component 
+b) Components can refer to other components in their output.
+c) You can split components into smaller components for example a userProfileCard
+d) Components names should be PascalCase.
+e) Elements that need keys should be unique, non-random identifiers.
+f) Methods should be in camelCase and be named for their function.
+g) Components should be written is ES6 (or ES2015) syntax.
+h) Lists and keys
+
+3. React Events 
+
+a) Click Events - for example increment and decrement counters (onClick)
+b) Change Events- for example input fields (onChange)
+c) Mouse Events - for example mouse over and mouse out (onMouseOver)
+d) Form Events - for example form events (onSubmit)
+
+
+4. React props
+
+/* Passing a react prp as an attribute */
+<Car brand="Ford" />
+
+/* Component receiving the prop */
+function Car(props) {
+    return <h2>I am a { props.brand }!</h2>;
+}
+
+/* You can destructure props */
+function Car({ brand }) {
+    return <h2>I am a { brand }!</h2>;
+}
