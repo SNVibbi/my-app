@@ -35,3 +35,25 @@ function Car(props) {
 function Car({ brand }) {
     return <h2>I am a { brand }!</h2>;
 }
+
+- Props are passed to the component using the props object.
+- React props can be spread in individually.
+- React props can be given a default value if none is provided.
+- Update a react prop with state, useState() => next topic.
+
+5. Conditional Rendering 
+
+a) For example , loading UI vs main UI => we can use a timer to simulate fetching data from external service.
+
+
+6. React Hooks (React 16.8)
+Remember: Refer to how to update props with state.
+
+a) useState - for example, useState(0)
+b) useEffect - for example, useEffect(() => {}, [])
+c) useContext - for example, useContext(MyContext)
+
+d) useReducer
+e) useRef
+f) useCallback
+g) useMemo

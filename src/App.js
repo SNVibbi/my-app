@@ -52,32 +52,143 @@ import React, { useState } from "react";
 //   );
 // };
 
+// function Car({data }) {
+//   return <div className="car">{` ${data.year} ${data.color} ${data.brand}`}</div>;
+// }
+
+// Loader component
+function Loader() {
+  return <div className="loader">Loading...</div>;
+}
+
+// Content component...
+// function Content() {
+//   return (
+//     <div className="content">
+//       <p>
+//         React is a Javascript Library for building user interfaces. It is maintained by
+//         Facebook and a community of individual developers and companies. React can be used as a
+//         base in development or mobile applications. However, React components
+//         are most often used in the context of a more traditional web applications, as it allows to render a virtual DOM on the server side then diff it and apply the
+//         changes to the UI in Javascript, without ever touching the DOM.
+//       </p>
+//     </div>
+//   );
+// }
+
 function App() {
-  // State...
-  const [counter, setCounter] = useState(0);
+  // // State...
+  // const [counter, setCounter] = useState(0);
 
-  // Handle increment...
-  const handleIncrement = (event) => {
-    event.preventDefault();
-    setCounter((prev) => prev + 1);
-  };
+  // // Handle increment...
+  // const handleIncrement = (event) => {
+  //   event.preventDefault();
+  //   setCounter((prev) => prev + 1);
+  // };
 
-  // Handle decrement...
-  const handleDecrement = (event) => {
-    event.preventDefault();
-    setCounter((prev) => prev - 1);
-  };
+  // // Handle decrement...
+  // const handleDecrement = (event) => {
+  //   event.preventDefault();
+  //   setCounter((prev) => prev - 1);
+  // };
 
   // Render...
+
+  // // Handle change...
+  // const handleChange = (event) => {
+  //   event.preventDefault();
+  //   console.log('Value :', event.target.value);
+  // }
+
+  // const [state, setState] = useState("Magic Is Here");
+
+  //Handle mouse over...
+  // const handleMouseOver = (event) => {
+  //   setState("Welcome to the Jungle")
+  //   setTimeout(() => {
+  //     setState("Magic Is Here");
+  //   }, 1000)
+  // }
+
+  // Car component...
+
+  // const data = {
+  //   brand: "Ford",
+  //   color: "Red",
+  //   year: "2020",
+  // };
+  //     <section className="counter-container">
+  //       <div className="counter-label">{counter}</div>
+  //       <button className="action-btn" onClick={handleIncrement}>
+  //         Increment
+  //       </button>
+  //       <button className="action-btn" onClick={handleDecrement}>
+  //         Decrement
+  //       </button>
+  //     </section>
+
+  //     <section className="form-container">
+  //       <form
+  //         onSubmit={(event) => {
+  //           event.preventDefault();
+  //           const { name, email, tel } = event.target.elements;
+  //           alert(`Hello ${name.value}! and Your email is ${email.value} and your phone number is ${tel.value} `)
+
+  //         }}
+  //       >
+  //         <input type="text" placeholder="Enter your name" name="name" />
+  //         <input type="text" placeholder="Enter your email" name="email" />
+  //         <input type="tel" placeholder="Enter your phone number" name="tel" />
+  //         <button type="submit">Submit</button>
+  //       </form>
+  //     </section>
+
+  // <section className="main-container">
+  //   <h1
+  //     onMouseOver={handleMouseOver}
+  //     className="hover-me"
+  //   >
+  //    {state}
+  //   </h1>
+  // </section>
+
+  //   const cars = [{
+  //     brand: "Ford",
+  //     color: "red",
+  //     year: "2020",
+  //   }, {
+  //     brand: "Audi",
+  //     color: "blue",
+  //     year: "2019",
+  //   }, {
+  //     brand: "BMW",
+  //     color: "black",
+  //     year: "2018",
+  //   }
+  // ];
+
+  // List of cars...
+  // const listOfCars = cars.map((car) => {
+  //   return <Car data={car} />
+  // })
+
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // // Set a timeout to simulate data loading...
+  // setTimeout(() => {
+  //   setIsLoading(false);
+  // }, 5000);
+
+  // return <section className="main-container">
+  //   {isLoading ? <Loader /> : <Content />}
+  // </section>;
+
+  const [count, setCount] = useState(8);
+
   return (
-    <section className="counter-container">
-      <div className="counter-label">{counter}</div>
-      <button className="action-btn" onClick={handleIncrement}>
-        Increment
-      </button>
-      <button className="action-btn" onClick={handleDecrement}>
-        Decrement
-      </button>
+    <section className="main-container">
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
     </section>
   );
 }
